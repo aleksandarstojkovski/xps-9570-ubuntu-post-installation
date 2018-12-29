@@ -7,12 +7,15 @@ apt install net-tools vim curl wget perl git
 apt install conky tilda gnome-tweak-tool gnome-shell-extensions chrome-gnome-shell vlc virtualbox virtualbox-ext-pack
 
 # install themes
+add-apt-repository ppa:noobslab/themes
+add-apt-repository ppa:noobslab/icons
+add-apt-repository ppa:numix/ppa
 apt install arc-icons arc-theme numix-gtk-theme numix-icon-theme-circle
 
 # install chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -P /home/$USER/Downloads/
 chown -R $USER:$USER /home/$USER/Downloads/google-chrome-stable_current_amd64.deb
-dpkg -i google-chrome-stable_current_amd64.deb
+dpkg -i /home/$USER/Downloads/google-chrome-stable_current_amd64.deb
 
 # configure virtualbox
 usermod -a -G vboxusers $USER

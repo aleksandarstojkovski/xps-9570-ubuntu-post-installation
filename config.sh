@@ -18,3 +18,10 @@ dpkg -i google-chrome-stable_current_amd64.deb
 usermod -a -G vboxusers $USER
 
 # goto Downloads and clone git
+cd /home/$USER/Downloads
+git clone https://github.com/aleksandarstojkovski/xps-9570-ubuntu-post-installation
+cp xps-9570-ubuntu-post-installation/tilda/config_0 /home/$USER/.config/tilda/
+cp xps-9570-ubuntu-post-installation/conky/conky.conf /etc/conky/
+
+echo "Finish, please reboot your pc."
+
